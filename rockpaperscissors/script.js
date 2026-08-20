@@ -16,24 +16,25 @@ const drawText = document.querySelector("#draw");
 rockBtn.addEventListener("click", rockClicked);
 function rockClicked() {
   //   console.log("ROCK CLICKED");
-  brugerensValg = "rock";
-  træfferValg();
+  // brugerensValg = "rock";
+  træfferValg("rock");
 }
 
 paperBtn.addEventListener("click", paperClicked);
 function paperClicked() {
   //   console.log("PAPER CLICKED");
-  brugerensValg = "paper";
-  træfferValg();
+  // brugerensValg = "paper";
+  træfferValg("paper");
 }
 scissorsBtn.addEventListener("click", scissorsClicked);
 function scissorsClicked() {
   //   console.log("SCISSOR CLICKED");
-  brugerensValg = "scissors";
-  træfferValg();
+  // brugerensValg = "scissors";
+  træfferValg("scissors");
 }
 
-function træfferValg() {
+function træfferValg(valg) {
+  brugerensValg = valg;
   skjulResultat();
 
   const muligheder = ["rock", "paper", "scissors"];
@@ -46,6 +47,7 @@ function nedtaelling() {
   player1.classList.add("shake");
   player2.classList.add("shake");
   player1.addEventListener("animationend", visValg);
+  player2.addEventListener("animationend", visValg);
 }
 
 function visValg() {
