@@ -36,7 +36,7 @@ hoej.onclick = function () {
 };
 
 rigtigt.onclick = function () {
-  tekst.innerHTML = "YAY ";
+  tekst.innerHTML = "YAY";
 
   lav.disabled = true;
   rigtigt.disabled = true;
